@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Callback</title>
+</head>
+<body>
+<script !src="">
+	
+	{
+		// function hallo(nama) {
+		// 	alert(`Hallo, ${nama}`);
+		// }
+		//
+		// function tampilkanPesan(callback) {
+		// 	const nama = prompt('Masukan Nama');
+		// 	callback(nama);
+		// }
+		//
+		// tampilkanPesan(hallo);
+	}
+	
+	{
+		// const mhs = [
+		// 	{
+		// 		nama : 'Dias Nur Ramadhan',
+		// 		npm : '2013020171',
+		// 		email : 'diasnurramadhan@gmail.com',
+		// 		idDosenWali : 1
+		// 	},
+		// 	{
+		// 		nama : 'Noermala Riska Agustin',
+		// 		npm : '2013020172',
+		// 		email : 'mala@gmail.com',
+		// 		idDosenWali : 2
+		// 	},
+		// 	{
+		// 		nama : 'Dima Ramadhansyah',
+		// 		npm : '2013020173',
+		// 		email : 'dima@gmail.com',
+		// 		idDosenWali : 2
+		// 	}
+		// ];
+		// console.log('mulai');
+		// mhs.forEach(m => console.log(m.nama))
+		// console.log('selesai');
+	}
+	
+	{
+		function getDataMahasiswa(url, success, err) {
+			const xhr = new XMLHttpRequest();
+			
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4){
+					if (xhr.status === 200){
+						success(xhr.response);
+					}else {
+						err();
+					}
+				}
+			}
+			xhr.open("GET", url);
+			xhr.send();
+		}
+		
+		getDataMahasiswa("data/mahasiswa.json",function (result) {
+			const mhs = JSON.parse(result);
+			console.log(mhs);
+			console.log(mhs[0]);
+			mhs.forEach(value => {
+				console.log(value.nama)
+			});
+		})
+		
+	}
+</script>
+</body>
+</html>

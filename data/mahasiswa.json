@@ -1,0 +1,16 @@
+[
+  {
+    "nama" : "Dias Nur Ramadhan",
+    "npm" : "2013020171",
+    "email" : "diasnurramadhan@gmail.com",
+    "jurusan" : "Teknik Informatika",
+    "idDosenWali" : 1
+  },
+  {
+    "nama" : "Noermala Riska Agustin",
+    "npm" : "2013020172",
+    "email" : "noermalariska@gmail.com",
+    "jurusan" : "Farmasi",
+    "idDosenWali" : 2
+  }
+]
